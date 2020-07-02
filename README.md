@@ -41,3 +41,7 @@ Things you may want to cover:
 |groupname|string|null: false|
 |messages_id|integer|null: false, foreign_key|
 
+### Association
+- has_many :messages
+- has_many :groups_users
+- has_many :users, through: groups_users
