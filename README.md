@@ -39,8 +39,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |groupname|string|null: false|
-|messages_id|integer|null: false, foreign_key|
-
+|message_id|integer|null: false, foreign_key|
 ### Association
 - has_many :messages
 - has_many :groups_users
@@ -49,9 +48,19 @@ Things you may want to cover:
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|null: false, foreign_key|
-|groups_id|integer|null: false, foreign_key|
+|user_id|integer|null: false, foreign_key|
+|group_id|integer|null: false, foreign_key|
+### Association
+- belong_to :user
+- belong_to :group
 
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text||
+|image|text||
+|user_id|integer|null: false, foreign_key|
+|group_id|integer|null: falser, foreign_key|
 ### Association
 - belong_to :user
 - belong_to :group
