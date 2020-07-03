@@ -27,7 +27,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |password|string|null: false|
 |email|string|null: false|
 ### Association
@@ -38,7 +38,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
+|name|string|null: false|
 |message_id|integer|null: false, foreign_key|
 ### Association
 - has_many :messages
