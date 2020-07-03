@@ -39,7 +39,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|message_id|integer|null: false, foreign_key|
 ### Association
 - has_many :messages
 - has_many :groups_users
