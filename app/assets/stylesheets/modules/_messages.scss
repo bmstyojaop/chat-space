@@ -130,6 +130,40 @@
     .Footer {
       background-color: #d2d2d2;
       height: 90px;
+      padding: 20px 50px 20px 40px;
+      display: flex;
+      align-items: center;
+      .Form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &__contents {
+          width: 100%;
+          background-color: #fff;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          .Form__icon{
+            line-height: 50px;
+            font-size: 25px;
+            input {
+              display: none;
+           }
+          }
+        }
+        &__submit {
+          background-color: #38aef0;
+          color: #fff;
+          font-size: 16px;
+          height: 50px;
+          margin-left: 15px;
+          padding: 0 30px;
+          display: flex;
+          align-items: center;
+        }
+      }
     }
   }
 }

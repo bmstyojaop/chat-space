@@ -40,3 +40,13 @@
         ここにメッセージが入ります。
     
   .Footer
+    .Form
+      .Form__contents
+        .Form__inputContent
+          type a message
+        .Form__icon
+          %label{class: "inputImage"}
+            = icon('fas', 'image')
+            %input{type: "file"}
+      .Form__submit
+        Send
