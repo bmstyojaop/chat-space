@@ -1,0 +1,52 @@
+.Chat_main
+  .RightHeader
+    .RinghtHeader__group
+      .RightHeader__groupName
+        test
+      %ul.RightHeader__memberList
+        Member：
+        %li.RightHeader__member
+          masa
+    = link_to "#", class: "RightHeader__editBtn" do
+      Edit
+
+      
+  .ChatField
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__name
+          masa
+        .MessageInfo__date
+          2020/07/05(Wed) 12:00:00
+      .Message
+        ここにメッセージが入ります。
+    
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__name
+          masa
+        .MessageInfo__date
+          2020/07/05(Wed) 12:00:00
+      .Message
+        ここにメッセージが入ります。
+
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__name
+          masa
+        .MessageInfo__date
+          2020/07/05(Wed) 12:00:00
+      .Message
+        ここにメッセージが入ります。
+    
+  .Footer
+    .Form
+      .Form__contents
+        .Form__inputContent
+          type a message
+        .Form__icon
+          %label{class: "inputImage"}
+            = icon('fas', 'image')
+            %input{type: "file"}
+      .Form__submit
+        Send
