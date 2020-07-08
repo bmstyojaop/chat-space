@@ -145,12 +145,15 @@
           justify-content: space-between;
           align-items: center;
           padding: 0 10px;
+          .Form__inputContent{
+            border: none;
+          }
           .Form__icon{
             line-height: 50px;
             font-size: 25px;
-            input {
-              display: none;
-           }
+          }
+          .Hidden {
+            display: none;
           }
         }
         &__submit {

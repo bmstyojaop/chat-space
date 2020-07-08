@@ -2,51 +2,25 @@
   .RightHeader
     .RinghtHeader__group
       .RightHeader__groupName
-        test
+        = @group.name
+
       %ul.RightHeader__memberList
         Member：
         %li.RightHeader__member
-          masa
-    = link_to "#", class: "RightHeader__editBtn" do
+          - @group.users.each do |user|
+            =user.name
+    = link_to edit_group_path(current_user), class: "RightHeader__editBtn" do
       Edit
 
       
   .ChatField
-    .MessageBox
-      .MessageInfo
-        .MessageInfo__name
-          masa
-        .MessageInfo__date
-          2020/07/05(Wed) 12:00:00
-      .Message
-        ここにメッセージが入ります。
-    
-    .MessageBox
-      .MessageInfo
-        .MessageInfo__name
-          masa
-        .MessageInfo__date
-          2020/07/05(Wed) 12:00:00
-      .Message
-        ここにメッセージが入ります。
-
-    .MessageBox
-      .MessageInfo
-        .MessageInfo__name
-          masa
-        .MessageInfo__date
-          2020/07/05(Wed) 12:00:00
-      .Message
-        ここにメッセージが入ります。
+    = render @messages
     
   .Footer
-    .Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        .Form__inputContent
-          type a message
-        .Form__icon
-          %label{class: "inputImage"}
-            = icon('fas', 'image')
-            %input{type: "file"}
-      .Form__submit
-        Send
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
